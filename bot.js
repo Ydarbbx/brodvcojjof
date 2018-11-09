@@ -1,6 +1,12 @@
+const Discord = require('discord.js')
+const client = new Discord.Client()
+          client.on('ready', () => {
+      console.log(`Logged in as ${client.user.tag}!`);
+    });
+
 client.on("message", message => {
 
-            if (message.content.startsWith(+ + "bc")) {
+            if (message.content.startsWith(prefix + "bc4")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -11,3 +17,4 @@ client.on("message", message => {
  message.delete(); 
 };     
 });
+client.login(process.env.BOT_TOKEN)
