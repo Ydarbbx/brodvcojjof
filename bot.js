@@ -6,7 +6,7 @@ const client = new Discord.Client()
 
 client.on("message", message => {
 
-            if (message.content.startsWith(- + "bc")) {
+            if (message.content.startsWith(* + "bc")) {
                          if (!message.member.hasPermission("ADMINISTRATOR"))  return;
   let args = message.content.split(" ").slice(1);
   var argresult = args.join(' '); 
@@ -17,4 +17,5 @@ client.on("message", message => {
  message.delete(); 
 };     
 });
+
 client.login(process.env.BOT_TOKEN)
