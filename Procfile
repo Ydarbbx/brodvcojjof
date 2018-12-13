@@ -1,2 +1,2 @@
-worker: node asmelfeelcode.js
+worker: node bot.js
 
